@@ -1,6 +1,5 @@
 # Collections review
 
-Collections: 
 - Em uma variável posso colocar um volume de dados.
 - Só aceita formato de dados(elementos) em Objetos. 
 - Não aceita tipos primitivos.
