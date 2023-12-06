@@ -15,11 +15,31 @@ public class TaskList {
 
     //creat list
 
-    public void insertTask (String description){
-        taskList.add(new Task(description));
+    public void addTask(String description){
+        Task task = new Task(description);
+        this.taskList.add(task);
+        //taskList.add(new Task(description));
     }
 
     public void removeTask (String description){
+        //repetition for check and remove
+        List<Task> getTasks = new ArrayList<>();
+        //get the tasks
+        for(int i = 0; i< taskList.size(); i++){
+            Task task = taskList.get(i);
+            //get the task from list
+            if(task.getDescription().equalsIgnoreCase((description))) {
+                getTasks.add(task);
+            }
+        }
+        taskList.removeAll(getTasks);
+    }
+    public int sizeList() {
+        return taskList.size();
+    }
+
+    public void printTasks() {
+            System.out.println(taskList);
 
     }
 }

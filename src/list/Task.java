@@ -2,7 +2,7 @@ package list;
 
 public class Task {
 
-    private String description;
+    private final String description;
 
     public Task(String description) {
         this.description = description;
@@ -10,5 +10,10 @@ public class Task {
 
     public String getDescription() {
         return description;
+    }
+
+    @Override
+    public String toString() {
+       return String.format("📙 %s\n ", description );
     }
 }

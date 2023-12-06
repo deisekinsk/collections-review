@@ -1,19 +1,40 @@
+import list.Order;
+import list.Task;
+import list.TaskList;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-            int a = i+i;
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = "+ i);
-            System.out.println("i = "+ a);
+        //TASK
+        //creat object
+        TaskList taskList = new TaskList();
 
-        }
+        //add
+        taskList.addTask("Lélia Gonzalez");
+        taskList.addTask("Sueli Carneiro");
+        taskList.addTask("Djamila Ribeiro");
+        taskList.addTask("Carolina Maria de Jesus");
+
+        taskList.removeTask("Lélia Gonzalez");
+
+        System.out.println("Total elements: " +taskList.sizeList());
+
+        taskList.printTasks();
+
+
+        //ORDER
+        Order orderList = new Order();
+
+        orderList.addItem("🍬 Candy", 12.3, 3);        orderList.addItem("🍿 Pipoca Grande", 10.5, 1);
+        orderList.addItem("🍿 Popcorn", 10.5, 1);
+        orderList.addItem("🥤 Large Soda", 8.0, 2);
+        orderList.addItem("🍫 Chocolate Bar", 5.75, 1);
+        orderList.addItem("🍕 Slice of Pizza", 7.99, 2);
+        orderList.addItem("☕ Coffee", 4.25, 1);
+
+        orderList.printOrder();
+
     }
 }
