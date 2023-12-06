@@ -27,7 +27,7 @@ public class Main {
         //ORDER
         Order orderList = new Order();
 
-        orderList.addItem("🍬 Candy", 12.3, 3);
+        orderList.addItem("🍬 Candy", 12.3, 3);        orderList.addItem("🍿 Pipoca Grande", 10.5, 1);
         orderList.addItem("🍿 Popcorn", 10.5, 1);
         orderList.addItem("🥤 Large Soda", 8.0, 2);
         orderList.addItem("🍫 Chocolate Bar", 5.75, 1);
