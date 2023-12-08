@@ -26,15 +26,24 @@ public class Main {
 
         //ORDER
         Order orderList = new Order();
-
+        //add
         orderList.addItem("🍬 Candy", 12.3, 3);
         orderList.addItem("🍿 Popcorn", 10.5, 1);
         orderList.addItem("🥤 Large Soda", 8.0, 2);
         orderList.addItem("🍫 Chocolate Bar", 5.75, 1);
         orderList.addItem("🍕 Slice of Pizza", 7.99, 2);
         orderList.addItem("☕ Coffee", 4.25, 1);
+        //remove
+        orderList.removeItem("☕ Coffee");
+        //showSize
+        System.out.println("Total Order Elements: "+orderList.sizeOrder());
 
+        //total value | String.format | %.2f
+        System.out.println("Total Value: $ "+ String.format("%.2f",orderList.totalValue()));
+        //showList
         orderList.printOrder();
+
+
 
     }
 }
