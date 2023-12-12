@@ -34,6 +34,20 @@ public class Order {
         itemList.removeAll(getItem);
     }
 
+    public List<Item> getItemByName(String name){
+        List<Item> itemByName = new ArrayList<>();
+
+        for(int i = 0; i<itemList.size();++i){
+            //get item
+            Item item = itemList.get(i);
+            //check string and add to list Item
+            if (item.getName().equalsIgnoreCase(name)){
+                itemByName.add(item);
+            }
+        }
+        return itemByName;
+    }
+
     public double totalValue(){
         double totalValue = 0d;
 
