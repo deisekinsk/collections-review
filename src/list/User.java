@@ -1,6 +1,5 @@
 package list;
 
-import java.util.Comparator;
 
 public class User implements Comparable<User>{
 

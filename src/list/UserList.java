@@ -23,11 +23,9 @@ public class UserList {
     }
 
 
-    public List<User> getByHeight(){
+    public List<User> getByHeight() {
         List<User> userHeight = new ArrayList<>(userList);
-        //UserComparator userComparator = new UserComparator();
-        Collections.sort(userList, new UserComparator());
+        Collections.sort(userHeight, new UserComparator());
         return userHeight;
-
     }
 }
