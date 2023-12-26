@@ -1,5 +1,6 @@
-package list;
+//basicOperations
 
+package listCollections;
 public class Task {
 
     private final String description;

@@ -1,4 +1,6 @@
-package list;
+//basicOperations
+
+package listCollections;
 
 public class Item {
 

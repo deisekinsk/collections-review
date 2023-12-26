@@ -1,4 +1,5 @@
-package list;
+//ordination
+package listCollections;
 
 import java.util.Comparator;
 

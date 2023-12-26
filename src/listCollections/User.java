@@ -1,4 +1,6 @@
-package list;
+//ordination
+
+package listCollections;
 
 
 public class User implements Comparable<User>{

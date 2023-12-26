@@ -1,4 +1,6 @@
-package list;
+//basicOperations
+
+package listCollections;
 
 import java.util.ArrayList;
 import java.util.List;
