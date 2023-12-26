@@ -1,5 +1,5 @@
 //ordination
-]package listCollections;
+package listCollections;
 
 import java.util.*;
 
