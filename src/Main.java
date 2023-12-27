@@ -1,4 +1,5 @@
 import listCollections.*;
+import setCollections.basicOperations.AdinkraSet;
 import setCollections.basicOperations.UserSet;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -95,5 +96,29 @@ public class Main {
         userSet.printUserSet();
         System.out.println(userSet.countUserSet());
 
+        //adikranSet
+        AdinkraSet adinkraSet = new AdinkraSet();
+
+        adinkraSet.addAdikranSet("Gye Nyame");
+        adinkraSet.addAdikranSet("Sankofa");
+        adinkraSet.addAdikranSet("Nyame Nti");
+        adinkraSet.addAdikranSet("Duafe");
+        adinkraSet.addAdikranSet("Adinkrahene");
+        adinkraSet.addAdikranSet("Nsoromma");
+        adinkraSet.addAdikranSet("Akoma Ntoaso");
+        adinkraSet.addAdikranSet("Dwennimmen");
+
+        System.out.println(adinkraSet.countAdikranSet());
+        adinkraSet.printAdikranSet();
+        adinkraSet.getAdinkraSet("Sankofa");
+
+        adinkraSet.removeAdikranSet("Dwennimmen");
+        System.out.println(adinkraSet.countAdikranSet());
+
+
+
+
+
     }
+
 }
