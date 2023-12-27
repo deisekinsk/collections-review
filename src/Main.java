@@ -96,7 +96,7 @@ public class Main {
         userSet.printUserSet();
         System.out.println(userSet.countUserSet());
 
-        //adikranSet
+        //adinkraSet
         AdinkraSet adinkraSet = new AdinkraSet();
 
         adinkraSet.addAdikranSet("Gye Nyame", "No one except God.");
@@ -130,6 +130,12 @@ public class Main {
 
         System.out.println(adinkraSet.getSelectedAdinkra());
 
+        adinkraSet.unselectedAdinkra("Nsoromma");
+
+        System.out.println(adinkraSet.getSelectedAdinkra());
+
+        System.out.println(adinkraSet.getUnselectedAdinkra());
+        //adinkraSet.removeAll();
 
 
     }

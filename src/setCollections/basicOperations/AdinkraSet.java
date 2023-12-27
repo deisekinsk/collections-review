@@ -66,7 +66,15 @@ public class AdinkraSet {
         }
     }
 
+    public void removeAll(){
+        if (adinkraSet.isEmpty()) {
+            System.out.println("Empty set");
+        }else {
+            adinkraSet.clear();
+        }
+    }
     public int countAdikranSet(){return  adinkraSet.size();}
+
     public void printAdikranSet(){
         if(!adinkraSet.isEmpty()) {
             System.out.println(adinkraSet);
@@ -83,6 +91,21 @@ public class AdinkraSet {
         }
     }
 
+    public void unselectedAdinkra(String adinkra){
+        Adinkra unlsecteAdinkraSet = null;
+        for(Adinkra i:adinkraSet){
+            if(i.getAdikran().equalsIgnoreCase(adinkra)) {
+                unlsecteAdinkraSet = i;
+                break;
+            }
+        }
+        if(unlsecteAdinkraSet != null && unlsecteAdinkraSet.getSelectAdinkra()){
+                unlsecteAdinkraSet.setSelectAdinkra(false);
+        }else{
+            System.out.println("Invalid value");
+        }
+    }
+
     public Set<Adinkra> getSelectedAdinkra(){
         Set<Adinkra> selectedAdinkra = new HashSet<>();
         for(Adinkra i: adinkraSet){
@@ -92,6 +115,18 @@ public class AdinkraSet {
         }
 
         return selectedAdinkra;
+    }
+
+    public Set<Adinkra> getUnselectedAdinkra(){
+        Set<Adinkra> unselectedAdinkra = new HashSet<>();
+        for(Adinkra i: adinkraSet){
+            //use ! for get the unselected
+            if(!i.getSelectAdinkra()){
+                unselectedAdinkra.add(i);
+            }
+        }
+
+        return unselectedAdinkra;
     }
 
 
