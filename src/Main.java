@@ -99,26 +99,38 @@ public class Main {
         //adikranSet
         AdinkraSet adinkraSet = new AdinkraSet();
 
-        adinkraSet.addAdikranSet("Gye Nyame");
-        adinkraSet.addAdikranSet("Sankofa");
-        adinkraSet.addAdikranSet("Nyame Nti");
-        adinkraSet.addAdikranSet("Duafe");
-        adinkraSet.addAdikranSet("Adinkrahene");
-        adinkraSet.addAdikranSet("Nsoromma");
-        adinkraSet.addAdikranSet("Akoma Ntoaso");
-        adinkraSet.addAdikranSet("Dwennimmen");
+        adinkraSet.addAdikranSet("Gye Nyame", "No one except God.");
+        adinkraSet.addAdikranSet("Sankofa", "Go back and get it.");
+        adinkraSet.addAdikranSet("Nyame Nti", "By God's grace.");
+        adinkraSet.addAdikranSet("Duafe", "Comb.");
+        adinkraSet.addAdikranSet("Adinkrahene", "Chief of the Adinkra symbols.");
+        adinkraSet.addAdikranSet("Nsoromma", "Star.");
+        adinkraSet.addAdikranSet("Akoma Ntoaso", "Unity of hearts.");
+        adinkraSet.addAdikranSet("Dwennimmen", "Ram's horn.");
+        adinkraSet.addAdikranSet("Aya", "Represents resilience and perseverance.");
 
-        System.out.println(adinkraSet.countAdikranSet());
+        System.out.println("total " + adinkraSet.countAdikranSet());
         adinkraSet.printAdikranSet();
         adinkraSet.getAdinkraSet("Sankofa");
 
         adinkraSet.removeAdikranSet("Dwennimmen");
-        System.out.println(adinkraSet.countAdikranSet());
+        System.out.println("total " + adinkraSet.countAdikranSet());
+        System.out.println(adinkraSet.getAdinkraByName("Aya"));
 
+        adinkraSet.updateAdinkraMean("Aya", "Represents resilience and perseverance. | " +
+                "Representa resistência e perseverança.");
 
+        System.out.println(adinkraSet.getAdinkraByName("Aya"));
+        adinkraSet.removeAdikranSet("Dwennimen");
+        System.out.println("total " + adinkraSet.countAdikranSet());
+
+        adinkraSet.selectAdinkra("Sankofa");
+        adinkraSet.selectAdinkra("Aya");
+        adinkraSet.selectAdinkra("Nsoromma");
+
+        System.out.println(adinkraSet.getSelectedAdinkra());
 
 
 
     }
-
 }

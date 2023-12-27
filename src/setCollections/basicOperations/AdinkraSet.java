@@ -12,12 +12,8 @@ public class AdinkraSet {
 
     }
 
-    public void addAdikranSet(String adinkra){
-        adinkraSet.add(new Adinkra(adinkra));
-    }
-
-    public void printAdikranSet(){
-        System.out.println(adinkraSet);
+    public void addAdikranSet(String adinkra, String meanAdrinkra){
+        adinkraSet.add(new Adinkra(adinkra, meanAdrinkra));
     }
 
     public void getAdinkraSet(String adikran){
@@ -30,8 +26,31 @@ public class AdinkraSet {
         }
     }
 
+    public Set<Adinkra> getAdinkraByName (String adinkra){
+        Set<Adinkra> adinkraByName = new HashSet<>();
+        for(Adinkra i : adinkraSet){
+            if(i.getAdikran().startsWith(adinkra)){
+                adinkraByName.add(i);
+            }
+        }
+        return adinkraByName;
+    }
+
+    public Adinkra updateAdinkraMean (String adinkra, String meanAdrinkra){
+        Adinkra updateMean = null;
+        for(Adinkra i: adinkraSet){
+            if(i.getAdikran().equalsIgnoreCase(adinkra)){
+                i.setMeanAdinkra(meanAdrinkra);
+                updateMean = i;
+                break;
+            }
+        }
+        return updateMean;
+    }
+
     public void removeAdikranSet (String adinkra){
         Adinkra removeAdikranSet = null;
+        if(!adinkra.isEmpty()){
         for (Adinkra i:adinkraSet) {
             if(i.getAdikran() == adinkra){
                 removeAdikranSet = i;
@@ -39,8 +58,41 @@ public class AdinkraSet {
             }
         }
         adinkraSet.remove(removeAdikranSet);
+        } else {
+            System.out.println("Invalid value==empty");
+        }
+        if(removeAdikranSet == null){
+            System.out.println("Invalid value==null");
+        }
     }
 
     public int countAdikranSet(){return  adinkraSet.size();}
+    public void printAdikranSet(){
+        if(!adinkraSet.isEmpty()) {
+            System.out.println(adinkraSet);
+        }else{
+            System.out.println("Invalid Set");
+        }
+    }
+
+    public void selectAdinkra(String adinkra){
+        Adinkra selectAdinkraSet = null;
+        for(Adinkra i : adinkraSet){
+            if(i.getAdikran().equalsIgnoreCase(adinkra))
+                i.setSelectAdinkra(true);
+        }
+    }
+
+    public Set<Adinkra> getSelectedAdinkra(){
+        Set<Adinkra> selectedAdinkra = new HashSet<>();
+        for(Adinkra i: adinkraSet){
+            if(i.getSelectAdinkra()){
+                selectedAdinkra.add(i);
+            }
+        }
+
+        return selectedAdinkra;
+    }
+
 
 }

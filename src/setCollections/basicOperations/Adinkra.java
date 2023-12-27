@@ -5,13 +5,28 @@ import java.util.Objects;
 public class Adinkra {
 
     private String adinkra;
+    private String meanAdinkra;
+    private boolean selectAdinkra;
 
-    public Adinkra(String adinkra) {
+    public Adinkra(String adinkra, String meanAdinkra) {
         this.adinkra = adinkra;
+        this.meanAdinkra = meanAdinkra;
+        this.selectAdinkra = false;
     }
 
     public String getAdikran(){
         return adinkra;
+    }
+    public String getMeanAdinkra(){return  meanAdinkra;}
+
+    public boolean getSelectAdinkra(){return selectAdinkra;}
+
+    public void setSelectAdinkra(boolean selectAdinkra) {
+        this.selectAdinkra = selectAdinkra;
+    }
+
+    public void setMeanAdinkra(String meanAdinkra){
+        this.meanAdinkra = meanAdinkra;
     }
 
     //set with unique adinkra
@@ -29,8 +44,10 @@ public class Adinkra {
 
     @Override
     public String toString() {
-        return "Adinkra{" +
-                "adikran=" + adinkra +"\n";
+        return "\nAdinkra{" +
+                "adinkra='" + adinkra + '\'' +
+                ", meanAdinkra='" + meanAdinkra + '\'' +
+                ", selectAdinkra=" + selectAdinkra +
+                '}';
     }
-
 }
