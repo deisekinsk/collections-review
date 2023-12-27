@@ -1,7 +1,9 @@
 package setCollections.basicOperations;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class AdinkraSet {
 
@@ -99,7 +101,7 @@ public class AdinkraSet {
                 break;
             }
         }
-        if(unlsecteAdinkraSet != null && unlsecteAdinkraSet.getSelectAdinkra()){
+        if(unlsecteAdinkraSet != null && unlsecteAdinkraSet.isSelectAdinkra()){
                 unlsecteAdinkraSet.setSelectAdinkra(false);
         }else{
             System.out.println("Invalid value");
@@ -109,7 +111,7 @@ public class AdinkraSet {
     public Set<Adinkra> getSelectedAdinkra(){
         Set<Adinkra> selectedAdinkra = new HashSet<>();
         for(Adinkra i: adinkraSet){
-            if(i.getSelectAdinkra()){
+            if(i.isSelectAdinkra()){
                 selectedAdinkra.add(i);
             }
         }
@@ -121,13 +123,25 @@ public class AdinkraSet {
         Set<Adinkra> unselectedAdinkra = new HashSet<>();
         for(Adinkra i: adinkraSet){
             //use ! for get the unselected
-            if(!i.getSelectAdinkra()){
+            if(!i.isSelectAdinkra()){
                 unselectedAdinkra.add(i);
             }
         }
 
         return unselectedAdinkra;
     }
+
+    //treeSet
+    public Set<Adinkra> sortAdinkraSetByName(){
+        return new TreeSet<>(adinkraSet);
+    }
+
+    public Set<Adinkra> sortAdinkraBySelected() {
+        TreeSet<Adinkra> sortedSet = new TreeSet<>(new AdinkraComparator());
+        sortedSet.addAll(adinkraSet);
+        return sortedSet;
+    }
+
 
 
 }

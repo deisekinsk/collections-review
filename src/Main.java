@@ -137,6 +137,8 @@ public class Main {
         System.out.println(adinkraSet.getUnselectedAdinkra());
         //adinkraSet.removeAll();
 
+        System.out.println(adinkraSet.sortAdinkraSetByName());
+        System.out.println(adinkraSet.sortAdinkraBySelected());
 
     }
 }
