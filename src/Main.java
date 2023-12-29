@@ -1,5 +1,6 @@
 import listCollections.*;
 import setCollections.basicOperations.AdinkraSet;
+import setCollections.basicOperations.OrderSet;
 import setCollections.basicOperations.UserSet;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -31,7 +32,7 @@ public class Main {
         //remove
         orderList.removeItem("☕ Coffee");
         //showSize
-        System.out.println("Total Order Elements: " + orderList.sizeOrder());
+        System.out.println("Total ItemSet Elements: " + orderList.sizeOrder());
         //total value | String.format | %.2f
         System.out.println(
                 "Total Value: $ " + String.format("%.2f", orderList.totalValue()));
@@ -139,6 +140,21 @@ public class Main {
 
         System.out.println(adinkraSet.sortAdinkraSetByName());
         System.out.println(adinkraSet.sortAdinkraBySelected());
+
+        //order
+
+        OrderSet itemSet = new OrderSet();
+
+        itemSet.addItem(9987766L, "Soda", 2.99, 5);
+        itemSet.addItem(1122334L, "Chips", 1.5, 3);
+        itemSet.addItem(4455667L, "Water", 1.0, 10);
+        itemSet.addItem(778899L, "Cookies", 3.49, 4);
+        itemSet.addItem(123456L, "Juice", 4.25, 6);
+
+        itemSet.printOrder();
+
+        System.out.println(itemSet.sortByName());
+        System.out.println(itemSet.sortByPrice());
 
     }
 }

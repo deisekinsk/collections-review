@@ -21,14 +21,14 @@ public class Order {
 
     //remove
     public void removeItem(String name){
-        //create a List with type of a class 'Item'
+        //create a List with type of a class 'ItemSet'
         List<Item> getItem = new ArrayList<>();
 
         //iteration on itemList
         for(int i = 0; i<itemList.size();++i){
             //get item
             Item item = itemList.get(i);
-            //check string and add to list Item
+            //check string and add to list ItemSet
             if (item.getName().equalsIgnoreCase(name)){
                 getItem.add(item);
             }
@@ -42,7 +42,7 @@ public class Order {
         for(int i = 0; i<itemList.size();++i){
             //get item
             Item item = itemList.get(i);
-            //check string and add to list Item
+            //check string and add to list ItemSet
             if (item.getName().equalsIgnoreCase(name)){
                 itemByName.add(item);
             }
