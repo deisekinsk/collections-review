@@ -2,9 +2,12 @@ import listCollections.*;
 import mapCollections.ECommerce;
 import mapCollections.ECommerceInvetory;
 import mapCollections.Inventory;
+import mapCollections.ToSchedule;
 import setCollections.basicOperations.AdinkraSet;
 import setCollections.basicOperations.OrderSet;
 import setCollections.basicOperations.UserSet;
+
+import java.time.LocalDate;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -188,6 +191,17 @@ public class Main {
         System.out.println(eCommerceInventory.getHighValue());
         System.out.println(eCommerceInventory.getMinValue());
         System.out.println(eCommerceInventory.getHighQuantity());
+
+        //TreeMap
+        ToSchedule schedule = new ToSchedule();
+
+        schedule.addEvent(LocalDate.of(2023, 5, 15), "Pop Festival", "Beyonce");
+        schedule.addEvent(LocalDate.of(2023, 5, 20), "Art Exhibition", "Monèt");
+        schedule.addEvent(LocalDate.of(2023, 6, 5), "Tech Conference", "Youtube By Susan " +
+                "Wojcicki");
+        schedule.addEvent(LocalDate.of(2023, 6, 10), "Music Concert", "Gary Clark Jr");
+
+        schedule.getByDate();
 
 
 
