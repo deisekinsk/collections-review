@@ -29,7 +29,7 @@ public class ECommerceInvetory {
         if(!ecommerceInventory.isEmpty()){
             //metodh values
             for (ECommerce i:ecommerceInventory.values()) {
-                totalValue+= i.getQuantity() *i.getQuantity();
+                totalValue += i.getQuantity() * i.getValue();
             }
         }
         return totalValue;
@@ -47,6 +47,8 @@ public class ECommerceInvetory {
         if(!ecommerceInventory.isEmpty()){
             for (ECommerce i: ecommerceInventory.values()) {
                 if(i.getValue() > highValue){
+                    //refresh
+                    highValue = i.getValue();
                     getHighValue = i;
                 }
             }
@@ -65,6 +67,7 @@ public class ECommerceInvetory {
         if(!ecommerceInventory.isEmpty()){
             for (ECommerce i: ecommerceInventory.values()) {
                 if(i.getValue() < minValue){
+                    minValue = i.getValue();
                     getMinValue = i;
                 }
             }
@@ -77,16 +80,17 @@ public class ECommerceInvetory {
      *
      * @return The item with the highest quantity value in the inventory.
      */
-    public ECommerce getHighQuantityValue(){
-        ECommerce getHighValue = null;
-        int highValue = Integer.MIN_VALUE;
+    public ECommerce getHighQuantity(){
+        ECommerce getHighQuantity  = null;
+        int highQuantity  = Integer.MIN_VALUE;
         if(!ecommerceInventory.isEmpty()){
             for (ECommerce i: ecommerceInventory.values()) {
-                if(i.getValue() > highValue){
-                    getHighValue = i;
+                if(i.getQuantity() > highQuantity ){
+                    highQuantity = i.getQuantity();
+                    getHighQuantity  = i;
                 }
             }
         }
-        return getHighValue;
+        return getHighQuantity;
     }
 }

@@ -177,17 +177,17 @@ public class Main {
 
         ECommerceInvetory eCommerceInventory = new ECommerceInvetory();
 
-        eCommerceInventory.addProduct(123,"Chanel No. 5", 150.00,5);
-        eCommerceInventory.addProduct(124, "Dior Sauvage", 120.00, 7);
-        eCommerceInventory.addProduct(125, "Paco Rabanne 1 Million", 90.00, 4);
-        eCommerceInventory.addProduct(126, "Creed Aventus", 400.00, 3);
-        eCommerceInventory.addProduct(127, "Yves Saint Laurent Black Opium", 120.00, 6);
-        eCommerceInventory.addProduct(128, "Giorgio Armani Acqua di Gio", 100.00, 8);
+        eCommerceInventory.addProduct(123L,"Chanel No. 5", 5.0,1);
+        eCommerceInventory.addProduct(124L, "Dior Sauvage", 10.0, 5);
+        eCommerceInventory.addProduct(125L, "Paco Rabanne 1 Million", 15.0, 2);
+        eCommerceInventory.addProduct(126L, "Creed Aventus", 400.00, 3);
+        eCommerceInventory.addProduct(127L, "Yves Saint Laurent Black Opium", 120.00, 6);
+        eCommerceInventory.addProduct(128L, "Giorgio Armani Acqua di Gio", 100.00, 8);
 
-        System.out.println(eCommerceInventory.getHighQuantityValue());
+        System.out.println(eCommerceInventory.getTotalValue());
         System.out.println(eCommerceInventory.getHighValue());
         System.out.println(eCommerceInventory.getMinValue());
-        System.out.println(eCommerceInventory.getTotalValue());
+        System.out.println(eCommerceInventory.getHighQuantity());
 
 
 
