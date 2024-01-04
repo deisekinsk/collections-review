@@ -1,4 +1,7 @@
 import listCollections.*;
+import mapCollections.ECommerce;
+import mapCollections.ECommerceInvetory;
+import mapCollections.Inventory;
 import setCollections.basicOperations.AdinkraSet;
 import setCollections.basicOperations.OrderSet;
 import setCollections.basicOperations.UserSet;
@@ -157,6 +160,40 @@ public class Main {
         System.out.println(itemSet.sortByPrice());
 
         //map
+        Inventory inventory = new Inventory();
+
+        inventory.addProduct("soap", 36154);
+        inventory.addProduct("T-shirt", 35574);
+        inventory.addProduct("shoes", 333);
+        inventory.addProduct("sunflower", 3546864);
+
+        inventory.getInventory();
+
+        inventory.removeProduct("soap");
+
+        inventory.getInventory();
+
+        System.out.println(inventory.getBarCodeByProduct("shoes"));
+
+        ECommerceInvetory eCommerceInventory = new ECommerceInvetory();
+
+        eCommerceInventory.addProduct(123,"Chanel No. 5", 150.00,5);
+        eCommerceInventory.addProduct(124, "Dior Sauvage", 120.00, 7);
+        eCommerceInventory.addProduct(125, "Paco Rabanne 1 Million", 90.00, 4);
+        eCommerceInventory.addProduct(126, "Creed Aventus", 400.00, 3);
+        eCommerceInventory.addProduct(127, "Yves Saint Laurent Black Opium", 120.00, 6);
+        eCommerceInventory.addProduct(128, "Giorgio Armani Acqua di Gio", 100.00, 8);
+
+        System.out.println(eCommerceInventory.getHighQuantityValue());
+        System.out.println(eCommerceInventory.getHighValue());
+        System.out.println(eCommerceInventory.getMinValue());
+        System.out.println(eCommerceInventory.getTotalValue());
+
+
+
+
+
+
 
 
     }
