@@ -103,24 +103,23 @@ Comparação e organização de dados
 - Exemplo de forEach
 
 
-    List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
-    for (int number : numbers) {
-    // Faz algo com number
-    }
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        for (int number : numbers) {
+        // Faz algo com number
+        }
 
 - Outro exemplo com arrays
 
-
-    public class Main {
-        public static void main(String[] args) {
-            String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
-            for (String i : cars) {
-                if (i.equals("Volvo")) {
-                    System.out.println(i);
+        public class Main {
+            public static void main(String[] args) {
+                String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+                for (String i : cars) {
+                    if (i.equals("Volvo")) {
+                        System.out.println(i);
+                    }
                 }
             }
         }
-    }
 
 #### Métodos equals() e hashCode()
 
