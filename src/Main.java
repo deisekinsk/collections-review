@@ -195,13 +195,18 @@ public class Main {
         //TreeMap
         ToSchedule schedule = new ToSchedule();
 
-        schedule.addEvent(LocalDate.of(2023, 5, 15), "Pop Festival", "Beyonce");
+        schedule.addEvent(LocalDate.of(2024, 5, 30), "Pop Festival", "Beyonce");
         schedule.addEvent(LocalDate.of(2023, 5, 20), "Art Exhibition", "Monèt");
-        schedule.addEvent(LocalDate.of(2023, 6, 5), "Tech Conference", "Youtube By Susan " +
+        schedule.addEvent(LocalDate.of(2023, 6, 15), "Tech Conference", "Youtube By Susan Wojcicki" +
+                " " +
                 "Wojcicki");
-        schedule.addEvent(LocalDate.of(2023, 6, 10), "Music Concert", "Gary Clark Jr");
+        schedule.addEvent(LocalDate.of(2024, 6, 10), "Music Concert", "Gary Clark Jr");
 
-        schedule.getByDate();
+
+        schedule.getSchedule();
+        System.out.println(LocalDate.now());
+        schedule.getNextDate();
+
 
 
 

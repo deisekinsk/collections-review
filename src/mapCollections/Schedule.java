@@ -19,9 +19,9 @@ public class Schedule {
 
     @Override
     public String toString() {
-        return "\nSchedule{" +
+        return "Schedule{" +
                 "event='" + event + '\'' +
-                ", band='" + band + '\'' +
+                ", band='" + band + '\''+"\n" +
                 '}';
     }
 }
