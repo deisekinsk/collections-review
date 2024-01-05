@@ -10,27 +10,24 @@
     - **Queue:** Coleção para manipulação de elementos em uma ordem específica (FIFO, LIFO).
 - **Package:** Utiliza o pacote `java.util` para acesso às classes de coleções.
 
-
 Todos os frameworks de coleções em Java incluem os seguintes três elementos:
 1. **Interfaces**
 2. **Implementações ou classes**
 3. **Algoritmos de Coleções**
 
 ### Tipos Genéricos `<T>` (Diamond)
-
 /**
 Versão genérica da classe Box.
 @param <T> o tipo do valor sendo armazenado
 */
-public class Box<T> {
-    private T t;
 
+    public class Box<T> {
+        private T t;
     public void set(T t) { this.t = t; }
     public T get() { return t; }
-}
+    }
 
 Nomes Comuns para Parâmetros de Tipo:
-
     E - Elemento (usado extensivamente pelo Java Collections Framework)
     K - Chave
     N - Número
@@ -39,15 +36,12 @@ Nomes Comuns para Parâmetros de Tipo:
     S, U, V, etc. - 2º, 3º, 4º tipos
 
 ### Interfaces Comparable e Comparator
-
 Comparação e organização de dados
-
 - **Comparable:** Fornece uma única sequência de ordenação. Pacote java.util. Método: compareTo()
 - **Comparator:** Fornece múltiplas sequências de ordenação. Método: compare()
 
 ### Principais Interfaces
 #### Interface List
-
     List
     ├── ArrayList
     ├── LinkedList
@@ -59,7 +53,6 @@ Comparação e organização de dados
 - Métodos: sort(), shuffle(), reverse(), binarySearch()
 
 #### Interface Set
-
     Set
     |-- SortedSet
     |   |-- NavigableSet
@@ -72,7 +65,6 @@ Comparação e organização de dados
 - *Principais implementações
 
 #### Interface Map
-
     Map
     |-- HashMap*
     |-- LinkedHashMap*
@@ -93,7 +85,6 @@ Comparação e organização de dados
 - *Principais implementações
 
 #### Laços for e forEach
-
 - Exemplo de loop for
 
         for (int i = 0; i < 5; i++) {
@@ -101,7 +92,6 @@ Comparação e organização de dados
         }
 
 - Exemplo de forEach
-
 
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
         for (int number : numbers) {
@@ -122,7 +112,6 @@ Comparação e organização de dados
         }
 
 #### Métodos equals() e hashCode()
-
 Os métodos equals() e hashCode() são comumente usados em Java para lidar com comparações e estruturas de dados como em coleções (HashMap, HashSet, etc.).
 
 equals(Object o): Verifica se dois objetos são considerados iguais.
